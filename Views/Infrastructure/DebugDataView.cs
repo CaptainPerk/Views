@@ -15,7 +15,7 @@ namespace Views.Infrastructure
 
             var viewStringBuilder = new StringBuilder();
 
-            viewStringBuilder.Append("---Routing Data---");
+            viewStringBuilder.AppendLine("---Routing Data---");
             foreach (var routeDataValue in context.RouteData.Values)
             {
                 viewStringBuilder.AppendLine($"Key: {routeDataValue.Key}, Value: {routeDataValue.Value}");
