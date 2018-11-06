@@ -11,11 +11,6 @@ namespace Views
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.Configure<MvcViewOptions>(o =>
-            {
-                o.ViewEngines.Clear();
-                o.ViewEngines.Insert(0, new DebugDataViewEngine());
-            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
