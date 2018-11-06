@@ -6,6 +6,6 @@ namespace Views.Controllers
     {
         public ViewResult Index() => View(new[] {"Apple", "Orange", "Pear"});
 
-        public ViewResult List => View();
+        public ViewResult List() => View();
     }
 }
