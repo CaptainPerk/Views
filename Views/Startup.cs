@@ -11,7 +11,11 @@ namespace Views
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.Configure<RazorViewEngineOptions>(rveo => rveo.ViewLocationExpanders.Add(new SimpleExpander()));
+            services.Configure<RazorViewEngineOptions>(rveo =>
+            {
+                rveo.ViewLocationExpanders.Add(new SimpleExpander());
+                rveo.ViewLocationExpanders.Add(new ColorExpander());
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
